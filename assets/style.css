@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
 
 *{
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,7 +12,12 @@
     transition: all .2s linear;
 }
 
-
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
 
 :root{
     --bg-light: #F2F2F2;
@@ -31,9 +37,114 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: var(--bg-light);
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow-bottom);
 }
+
+header .logo{
+    font-size: 2rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--text-purple);
+}
+
+header #menu{
+    font-size: 2rem;
+    color: var(--text-light);
+    font-weight: 600;
+    display: none;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--text-light);
+    
+}
+
+header .navbar .active,
+header .navbar a:hover{
+    color: var(--text-white);
+    background: var(--text-purple);
+}
+
+header .navbar i{
+    cursor: pointer;
+    font-size: 1.7rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    background: var(--text-purple);
+    text-align: center;
+    border-radius: 50%;
+    color: var(--text-white);
+    line-height: 4.5rem;
+    margin-left: .5rem;
+}
+
 
 header.bg-mode{
     background: var(--bg-dark);
+}
+
+@media (max-width: 991px) {
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+   
+    header #menu{
+        display: inline-block;
+        font-size: 3rem;
+        color: var(--text-light);
+    }
+
+    header {
+        z-index: 100;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: -1000%;
+        right: 0;
+        left: 0;
+        background: var(--text-white);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+    }
+
+    header .navbar.active{
+        top: 100%;
+        transition: .2s ease-in;
+    }
+
+    header .navbar a{
+        text-align: center;
+        padding: 1.5rem;
+        margin: 1rem;
+        display: block;
+    }
+
+ 
+
+  
+
 }
