@@ -30,10 +30,18 @@ html{
     --text-dark: #07152F;
     --secondary-color: ##1C1D28;
     --box-shadow-bottom: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-body{
-    background: ;
+.dark-mode{
+    --bg-light: #13141F;
+    --text-light: #FFFFFF;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    --text-dark: #F2F2F2;
+}
+
+section{
+    margin: 2rem 9%;
 }
 
 header{
@@ -50,23 +58,22 @@ header{
 }
 
 header .logo{
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
-    color: var(--text-purple);
+    color: var(--text-light);
 }
 
-header #menu{
-    font-size: 2rem;
-    color: var(--text-light);
-    font-weight: 600;
-    display: none;
+header .navbar{
+    flex: 1;
+    text-align: right;
 }
 
 header .navbar a{
     font-size: 1.7rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
+    margin: 0 .5rem;
     color: var(--text-light);
     
 }
@@ -77,22 +84,133 @@ header .navbar a:hover{
     background: var(--text-purple);
 }
 
-header .navbar i{
+header .controls #theme{
     cursor: pointer;
     font-size: 1.7rem;
-    height: 4.5rem;
-    width: 4.5rem;
-    background: var(--text-purple);
+    /* background: var(--text-purple); */
     text-align: center;
-    border-radius: 50%;
-    color: var(--text-white);
-    line-height: 4.5rem;
+    color: var(--text-light);
     margin-left: .5rem;
 }
 
+header .controls #menu{
+    cursor: pointer;
+    font-size: 1.7rem;
 
-header.bg-mode{
-    background: var(--bg-dark);
+    /* background: var(--text-purple); */
+    text-align: center;
+    color: var(--text-light);
+    margin-left: .5rem;
+    display: none;
+}
+
+
+.home{
+    margin-top: 9rem;
+    /* min-height: 100vh;
+    height: 100%;
+    width: 100%; */
+    background-size: cover;
+    background: var(--bg-light);
+    background-position: center;
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.home .home-intro{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home .home-profile{
+    border: 1px solid red;
+}
+
+
+.home .home-intro h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-purple);
+}
+
+.home .home-intro h1{
+    font-size: 7rem;
+    margin: 10px 0px 25px;
+    line-height: 1.5;
+    font-weight: 650;
+    color: var(--text-dark);
+}
+
+.home .home-intro h5{
+    margin-bottom: 2rem;
+    font-size: 1.9rem;
+    font-weight: 599;
+    color: var(--text-light);
+}
+
+.home .home-intro h5 span{
+    color: var(--text-purple);
+}
+
+
+
+.home .home-intro p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.home .home-intro .socials{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.home .home-intro .socials a{
+    height: 3.7rem;
+    width: 3.7rem;
+    line-height: 3.7rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: var(--text-white);
+    margin-right: 1.3rem;
+    background: var(--text-purple);
+}
+
+
+.home .home-profile{
+    display: flex;
+    justify-content: center;
+}
+
+.home .home-profile .profile-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55rem;
+    width: 55rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--text-purple);
+}
+
+.home .home-profile .profile-bg img{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn{
+    font-size: 1.7rem;
+    background: var(--text-purple);
+    border-radius: .5rem;
+    padding: .8rem 1rem;
 }
 
 @media (max-width: 991px) {
@@ -110,15 +228,19 @@ header.bg-mode{
 }
 
 @media (max-width: 768px) {
-   
-    header #menu{
-        display: inline-block;
-        font-size: 3rem;
-        color: var(--text-light);
-    }
+
 
     header {
         z-index: 100;
+    }
+
+    header .controls #menu{
+        display: inline-block;
+    }
+
+    header .controls #theme,
+    header .controls #menu{
+        font-size: 3rem;
     }
 
     header .navbar{
@@ -126,8 +248,8 @@ header.bg-mode{
         top: -1000%;
         right: 0;
         left: 0;
-        background: var(--text-white);
         border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
         padding: 1rem;
     }
 
@@ -136,15 +258,36 @@ header.bg-mode{
         transition: .2s ease-in;
     }
 
+    header .navbar .control{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    header .navbar .control .close-btn{
+        text-align: center;
+        font-size: 1.9rem;
+        font-weight: 600;
+        color: var(--text-purple);
+    }
+
+    header .navbar .close-btn{
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+    }
+
     header .navbar a{
         text-align: center;
+        background: #eee;
         padding: 1.5rem;
-        margin: 1rem;
+        margin: 1rem 5rem;
         display: block;
     }
+}
 
  
 
   
 
-}
