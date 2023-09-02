@@ -28,21 +28,41 @@ html{
     --main-color: #13141F;
     --text-light: #6A6B6C;
     --text-dark: #07152F;
-    --secondary-color: ##1C1D28;
+    --secondary-color: #1C1D28;
+    --card-bg: #F2F2F2;
     --box-shadow-bottom: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .dark-mode{
-    --bg-light: #14141C;
+    --bg-light: #13141F;
     --text-light: #FFFFFF;
     transition: background-color 0.3s ease, color 0.3s ease; 
     --text-dark: #F2F2F2;
+    --card-bg: #1C1D28;
+}
+
+body.dark-mode{
+    background: #13141F;
 }
 
 section{
-    padding: 2rem 9%;
+    padding: 7rem 9%;
     margin: 4rem 0;
+}
+
+.btn{
+    margin-top: 1rem;
+    color: var(--text-white);
+    font-size: 1.7rem;
+    background: var(--text-purple);
+    border-radius: .5rem;
+    padding: .9rem 3rem;
+    transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    background: #7d4ec9;
 }
 
 header{
@@ -187,9 +207,6 @@ header .controls #menu{
 .home .home-intro .socials a:hover{
     transform: scale(1.1);
     transition: .5s;
-    background: var(--text-gray);
-    color: var(--bg-light);
-
 }
 
 
@@ -217,18 +234,6 @@ header .controls #menu{
     object-fit: cover;
 }
 
-.btn{
-    margin-top: 1rem;
-    color: var(--text-white);
-    font-size: 1.7rem;
-    background: var(--text-purple);
-    border-radius: .5rem;
-    padding: .9rem 3rem;
-}
-
-.btn:hover{
-    transform: scale(1.1);
-}
 
 .heading{
     color: var(--text-purple);
@@ -280,6 +285,44 @@ header .controls #menu{
     line-height: 1.5;
     margin-bottom: 2rem;
 }
+
+.skills{
+    border: 1px solid red;
+    background: var(--bg-light);
+}
+
+.skills .skills-container{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.skills .skills-container .skill-card{
+    padding: 1.2rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    border-radius: .6rem;
+    background: var(--card-bg);
+}
+
+.skills .skills-container .skill-icon img{
+    max-width: 100%;
+    height: 5rem;
+    width: 4rem;
+    margin-bottom: .3rem;
+}
+
+.skills .skills-container span{
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--text-light);
+}
+
+
+
 
 
 
