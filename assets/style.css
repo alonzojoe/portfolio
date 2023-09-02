@@ -41,7 +41,7 @@ html{
 }
 
 section{
-    margin: 2rem 9%;
+    padding: 2rem 9%;
 }
 
 header{
@@ -140,7 +140,7 @@ header .controls #menu{
 .home .home-intro h1{
     font-size: 7rem;
     margin: 10px 0px 25px;
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 650;
     color: var(--text-dark);
 }
@@ -206,6 +206,7 @@ header .controls #menu{
     border-radius: 50%;
     overflow: hidden;
     background: var(--text-purple);
+    border: .2rem solid var(--text-purple);
 }
 
 .home .home-profile .profile-bg img{
@@ -299,6 +300,11 @@ header .controls #menu{
         padding: 1.5rem;
         margin: 1rem 5rem;
         display: block;
+    }
+
+    .home .home-profile .profile-bg{
+        height: 35rem;
+        width: 35rem;
     }
 }
 
