@@ -34,7 +34,7 @@ html{
 }
 
 .dark-mode{
-    --bg-light: #13141F;
+    --bg-light: #14141C;
     --text-light: #FFFFFF;
     transition: background-color 0.3s ease, color 0.3s ease; 
     --text-dark: #F2F2F2;
@@ -42,6 +42,7 @@ html{
 
 section{
     padding: 2rem 9%;
+    margin: 4rem 0;
 }
 
 header{
@@ -113,10 +114,10 @@ header .controls #menu{
     background-size: cover;
     background: var(--bg-light);
     background-position: center;
-   
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+    border: 1px solid red;
 }
 
 .home .home-intro{
@@ -226,8 +227,64 @@ header .controls #menu{
 }
 
 .btn:hover{
-   transform: scale(1.1);
+    transform: scale(1.1);
 }
+
+.heading{
+    color: var(--text-purple);
+    font-size: 4.5rem;
+    line-height: 1.3;
+    margin-bottom: .3rem;
+}
+
+.sub-heading{
+    color: var(--text-light);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.about{
+    border: 1px solid red;
+    background: var(--bg-light);
+}
+
+.about .about-content{
+    display: grid;
+    grid-template-columns: repeat(2, calc(100% / 2));
+    gap: 1rem;
+    text-align: left;
+}
+
+.about .about-content .about-paragraph{
+    border: 1px solid red;
+    padding: 3rem;
+}
+
+.about .about-content .about-paragraph p{
+    color: var(--text-light);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+
+.about .about-content .about-paragraph h3{
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.about .about-content .about-paragraph span{
+    color: var(--text-light);
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
 
 @media (max-width: 991px) {
     html{
