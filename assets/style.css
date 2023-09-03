@@ -321,7 +321,46 @@ header .controls #menu{
     color: var(--text-light);
 }
 
+.projects{
+    border: 1px solid red;
+    background: var(--bg-light);
+}
 
+.projects .projects-container{
+    border: 1px solid red;
+    padding: 3rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects .projects-container .project-card{
+    border-radius: .6rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    background: var(--card-bg);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.projects .projects-container .project-card .project-title .image-section{
+    /* background: var(--text-purple); */
+    border-radius: .6rem .6rem 0 0;
+}
+
+.projects .projects-container .project-card .project-title .image-section img{ 
+    width: 100%;
+    border-radius: .6rem .6rem 0 0;
+}
+
+
+.projects .projects-container .project-card .project-title .text-section{
+    padding: .5rem;
+}
+
+.projects .projects-container .project-card .project-title .text-section h2{
+    font-size: 2rem;
+}
 
 
 
