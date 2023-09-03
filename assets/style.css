@@ -323,6 +323,11 @@ header .controls #menu{
     background: var(--card-bg);
 }
 
+.skills .skills-container .skill-card:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
 .skills .skills-container .skill-icon img{
     max-width: 100%;
     height: 5rem;
