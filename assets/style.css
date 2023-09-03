@@ -351,15 +351,44 @@ header .controls #menu{
 .projects .projects-container .project-card .project-title .image-section img{ 
     width: 100%;
     border-radius: .6rem .6rem 0 0;
+    border-bottom: .1rem solid rgba(0, 0, 0, .1);
 }
 
 
 .projects .projects-container .project-card .project-title .text-section{
-    padding: .5rem;
+    padding: 0 1rem;
 }
 
 .projects .projects-container .project-card .project-title .text-section h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    color: var(--text-light);
+    margin: 1rem 0;
+}
+
+.projects .projects-container .project-card .project-title .text-section p{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-light);
+}
+
+.projects .projects-container .project-card .project-info{
+    border: 1px solid red;
+    padding: 1rem 1rem;
+}
+
+.projects .projects-container .project-card .project-info h3{
+    color: var(--text-light);
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 600;
+    margin-bottom: .6rem;
+}
+
+.projects .projects-container .project-card .project-info p{
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-light);
 }
 
 
