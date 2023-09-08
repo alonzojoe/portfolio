@@ -425,6 +425,7 @@ header .controls #menu{
 
 .contact .contact-container{
     padding: 3rem;
+    border: 1px solid red;
 }
 
 .contact .contact-container form{
