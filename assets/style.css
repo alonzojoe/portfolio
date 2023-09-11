@@ -473,7 +473,7 @@ header .controls #menu{
 
 .contact .contact-container form .input-box .input input:focus,
 .contact .contact-container form .input-box .input textarea:focus{
-    border: .1rem solid var(--text-purple);
+    border: .2rem solid var(--text-purple);
 }
 
 .contact .contact-container form .input-box .input textarea{
@@ -498,6 +498,38 @@ header .controls #menu{
     color: var(--text-light);
 }
 
+.contact .contact-container .contact-box .container-info{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.contact .contact-container .contact-box .container-info .contact-info{
+    border: 1px solid red;
+    padding: 1rem;
+}
+
+.contact .contact-container .contact-box .container-info .contact-info a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--text-purple);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact .contact-container .contact-box .container-info .contact-info span{
+    color: var(--text-light);
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
 
 
 
