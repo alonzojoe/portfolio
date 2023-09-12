@@ -473,7 +473,7 @@ header .controls #menu{
 
 .contact .contact-container form .input-box .input input:focus,
 .contact .contact-container form .input-box .input textarea:focus{
-    border: .2rem solid var(--text-purple);
+    border: .1rem solid var(--text-purple);
 }
 
 .contact .contact-container form .input-box .input textarea{
@@ -494,7 +494,7 @@ header .controls #menu{
     /* border-top: 1px solid var(--card-bg); */
     max-width: 100%;
     margin: 0 auto;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     color: var(--text-light);
 }
 
@@ -564,13 +564,16 @@ header .controls #menu{
     }
 
     header .navbar{
+        background: var(--bg-light);
         position: absolute;
-        top: -1000%;
+        top: -1900%;
         right: 0;
         left: 0;
         border-top: .1rem solid rgba(0, 0, 0, .2);
         border-bottom: .1rem solid rgba(0, 0, 0, .2);
         padding: 1rem;
+        height: 100vh;
+        overflow: hidden;
     }
 
     header .navbar.active{
@@ -600,10 +603,12 @@ header .controls #menu{
 
     header .navbar a{
         text-align: center;
-        background: #eee;
+        /* background: #eee; */
         padding: 1.5rem;
-        margin: 1rem 5rem;
+        margin: 2rem 30rem;
         display: block;
+        font-size: 1.9rem;
+        font-weight: 600;
     }
 
     .home .home-profile .profile-bg{
