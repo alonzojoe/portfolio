@@ -545,6 +545,16 @@ header .controls #menu{
     section{
         padding: 2rem;
     }
+
+    .projects .projects-container {
+        grid-template-columns: repeat(1, 1fr);
+        transition: .3s;
+    }
+
+    .skills .skills-container{
+        grid-template-columns: repeat(4, 3fr);
+        transition: .3s;
+    }
 }
 
 @media (max-width: 768px) {
@@ -614,6 +624,18 @@ header .controls #menu{
     .home .home-profile .profile-bg{
         height: 35rem;
         width: 35rem;
+    }
+
+    .about .about-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .skills-container{
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .contact .contact-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

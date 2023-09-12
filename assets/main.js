@@ -7,6 +7,7 @@ const body = document.querySelector('body')
 
 
 menu.onclick = () => {
+    menu.classList.toggle('bx-x')
     navbar.classList.toggle('active')
 }
 
