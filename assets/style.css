@@ -485,22 +485,6 @@ header .controls #menu{
     resize: none;
 }
 
-.footer{
-    /* background: var(--bg-light); */
-    border: 1px solid red;
-    padding: 0 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer p{
-    /* border-top: 1px solid var(--card-bg); */
-    max-width: 100%;
-    margin: 0 auto;
-    font-size: 1.7rem;
-    color: var(--text-light);
-}
 
 .contact .contact-container .contact-box .container-info{
     border: 1px solid red;
@@ -533,6 +517,24 @@ header .controls #menu{
     color: var(--text-light);
     font-size: 1.7rem;
     margin-bottom: 2rem;
+}
+
+.footer{
+    /* background: var(--bg-light); */
+    border: 1px solid red;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer p{
+    /* border-top: 1px solid var(--card-bg); */
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 1.7rem;
+    color: var(--text-light);
 }
 
 
