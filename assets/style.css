@@ -151,7 +151,7 @@ header .controls #menu{
     background-position: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 1.5rem;
     border: 1px solid red;
 }
 
@@ -234,8 +234,8 @@ header .controls #menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55rem;
-    width: 55rem;
+    height: 40rem;
+    width: 40rem;
     border-radius: 50%;
     overflow: hidden;
     background: var(--text-purple);
@@ -398,6 +398,7 @@ header .controls #menu{
     color: var(--text-light);
 }
 
+
 .projects .projects-container .project-card .project-info{
     /* border: 1px solid red; */
     padding: 1rem 1rem;
@@ -417,6 +418,9 @@ header .controls #menu{
     color: var(--text-light);
 }
 
+.projects .projects-container .project-card .project-info p .bxs-circle{
+    font-size: 1rem;
+}
 
 .contact{
     border: 1px solid red;
@@ -621,6 +625,11 @@ header .controls #menu{
         font-weight: 600;
     }
 
+    .home {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
     .home .home-profile .profile-bg{
         height: 35rem;
         width: 35rem;
@@ -640,6 +649,14 @@ header .controls #menu{
 }
 
  
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
 
+    .skills .skills-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
   
 
